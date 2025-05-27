@@ -12,6 +12,7 @@
 	--border: #FFF;
 	color-scheme: dark;
 }
+
 *{
 	margin: 0;
 	padding: 0;
@@ -19,6 +20,7 @@
 	touch-action: pan-x pan-y;
   	height: 100% 
 }
+
 /* Dark mode */
 .dark_mode_title{
 	color: var(--text);
