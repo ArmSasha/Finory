@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Register</title>
+	<link rel="stylesheet" href="{% static 'css/register.css' %}">
+</head>
+<body>
+	
+	<header>
+		<img src="{% static 'Images/logo.png' %}">
+		<p>Контролируй свои<br><span>деньги</span></p>
+	</header>
+
+	<main>
+		<div class="register_buttons">
+			<!-- <button id='themeToggle'>Переключиться</button> -->
+			<div class="dark_mode">
+                <span class="dark_mode_title">Тёмная тема</span>
+                <label class="switch">
+                    <input type="checkbox" id="themeToggle" class="switch__input" onchange="ChangeTheme(this.checked)">
+                    <span class="switch__slider"></span>
+                </label>
+            </div>
+			<button class="rigister_button">
+				<img src="{% static 'Images/lock.png' %}" class="button_img_1">
+				<span>Добавить пароль</span>
+			</button>
+			<button class="rigister_button">
+				<img src="{% static 'Images/touch.png' %}" class="button_img_2">
+				<span>Добавить отпечаток</span>
+			</button>
+			<button class="rigister_button">
+				<img src="{% static 'Images/planet.png' %}" class="button_img_3">
+				<span>Выберите язык</span>
+			</button>
+			<button class="rigister_button">
+				<img src="{% static 'Images/money.png' %}" class="button_img_4">
+				<span>Выберите валюту</span>
+			</button>
+		</div>
+	</main>
+
+	<script src="{% static 'js/main.js' %}"></script>
+
+</body>
+</html>
