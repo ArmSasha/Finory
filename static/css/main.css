@@ -1,3 +1,10 @@
+{% load static %}
+@font-face {
+    font-family: 'SF-PRO';
+    src: url("{% static 'fonts/SF-Pro.ttf' %}");
+}
+
+
 :root {
 	--mainBg: #F4F4F7;
 	--text: #000;
@@ -28,7 +35,7 @@
 .dark_mode_title{
 	color: var(--text);
 	padding-right: 20px;
-	font-family: SF Pro Display, Semibold;
+	font-family: SF Pro;
     font-size: 20px;
 }
 
@@ -97,13 +104,18 @@
 *{
 	margin: 0;
 	padding: 0;
-    font-family: SF Pro Display, Semibold;
+    font-family: SF Pro, sans-serif;
 }
 
 body{
     text-align: center;
     background-color: var(--mainBg);
     color: var(--text);
+}
+
+
+.cards, .access, .debts, .loans{
+    padding-left: 10px;
 }
 
 .dropdown {
@@ -113,13 +125,14 @@ body{
     padding: 0 8px;
     border-radius: 6px;
     font-size: 14px;
+    margin-top: 20px; /* отступ вниз от кнопки */
 
 }
 .dropdown.open {
     max-height: 200px;
     padding: 8px;
 }
-.cards_title,.access_title, .debts_title, .loans_title {
+.cards_title, .access_title, .debts_title, .loans_title {
     display: flex;
     align-items: center;
     width: 100%;
@@ -132,6 +145,11 @@ body{
     font-size: 20px;
     font-weight: 700;
 }
+
+.access_title, .debts_title, .loans_title{
+    padding-top: 20px;
+}
+
 .accounts_arrow {
     padding: 3px;
     fill: var(--accountArrow);
