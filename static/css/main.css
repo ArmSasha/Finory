@@ -106,20 +106,20 @@ body{
     color: var(--text);
 }
 
-.cards_dropdown {
+.dropdown {
     height: 0;
     overflow: hidden;
-    transition: height 0.4s ease;
+    transition: height 0.3s ease;
     padding: 0 8px;
     border-radius: 6px;
     font-size: 14px;
 
 }
-.cards_dropdown.open {
+.dropdown.open {
     max-height: 200px;
     padding: 8px;
 }
-.cards_title {
+.cards_title,.access_title, .debts_title, .loans_title {
     display: flex;
     align-items: center;
     width: 100%;
@@ -140,6 +140,19 @@ body{
 }
 
 .cards_title.active .accounts_arrow {
+    transform: rotate(0deg);
+}
+
+
+.access_title.active .accounts_arrow {
+    transform: rotate(0deg);
+}
+
+.debts_title.active .accounts_arrow {
+    transform: rotate(0deg);
+}
+
+.loans_title.active .accounts_arrow {
     transform: rotate(0deg);
 }
 
