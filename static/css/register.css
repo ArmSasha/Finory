@@ -93,7 +93,7 @@ body{
 	color: var(--text);
 }
 header{
-	background-image: url(../Images/register_bg.png);
+	background-image: url(../Images/register/register_bg.png);
     width: 100%;
     height: 40vh;
     overflow-y: auto;
