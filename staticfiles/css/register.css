@@ -1,0 +1,165 @@
+:root {
+	--mainBg: #F4F4F7;
+	--text: #000;
+	--buttonBg: #FFFFFF;
+	--border: #000;
+	color-scheme: light;
+}
+[dark]{
+	--mainBg: #1A1A19;
+	--text: #fff;
+	--buttonBg: #212324;
+	--border: #FFF;
+	color-scheme: dark;
+}
+
+/* Dark mode */
+.dark_mode_title{
+	color: var(--text);
+	padding-right: 20px;
+	font-family: SF Pro Display, Semibold;
+    font-size: 20px;
+}
+
+.dark_mode{
+	margin-bottom: 30px;
+    font-size: 18px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.switch{
+    display: inline-block;
+    position: relative;
+    width: 60px;
+    height: 34px;
+}
+.switch__input{
+    height: 0;
+    width: 0;
+    opacity: 0;
+}
+.switch__slider{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 34px;
+    background-color: #ccc;
+    transition: 0.4s;
+}
+.switch__slider::before {
+    content: "";
+    position: absolute;
+    left: 4px;
+    bottom: 4px;
+    height: 26px;
+    width: 26px;
+    border-radius: 50px;
+    background-color: #fff;
+    transition: 0.4s;
+}
+.switch__input:focus + .switch__slider{
+    box-shadow: 0 0 1px #1DB954;
+}
+.switch__input:checked + .switch__slider{
+    background-color: #1DB954; 
+}
+.switch__input:checked + .switch__slider::before{
+    transform: translateX(26px);
+}
+
+.project_version {
+    position: absolute; /* Абсолютное позиционирование */
+    bottom: 10px; /* Отступ от нижнего края */
+    right: 10px; /* Отступ от правого края */
+    font-size: 13px; /* Размер шрифта */
+    color: #242424; /* Цвет текста */
+}
+
+
+/*_________________________________________________________________________*/
+
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	text-align: center;
+	background-color: var(--mainBg);
+	color: var(--text);
+}
+header{
+	background-image: url(../Images/register_bg.png);
+    width: 100%;
+    height: 40vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    color: #FFF;
+}
+
+header>p{
+	display: flex;
+    font-family: SF Pro Display, Semibold;
+    font-size: 20px;
+    flex-direction: column;
+    align-items: center;
+}
+
+header>p>span{
+	font-family: SF Pro Display, Bold;
+	font-size: 32px;
+}
+
+main{
+	display: flex;
+	justify-content: center;
+	padding-top: 65px;
+}
+.register_buttons{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.rigister_button{
+	display: flex;
+	border: 1px solid var(--border);
+	color: var(--text);
+	background-color: var(--buttonBg);
+	width: 310px;
+	height: 50px;
+	text-align: center;
+	justify-content: flex-start;
+	border-radius: 25px;
+	align-items: center;
+	font-family: SF Pro Display, Semibold;
+	font-size: 16px;
+	font-weight: 700;
+	margin-bottom: 31px;
+}
+.button_img_1, .button_img_2{
+	padding-left: 23px;
+	padding-right: 32px;
+}
+.button_img_3, .button_img_4{
+	padding-left: 12px;
+}
+.button_img_3{
+	padding-right: 25px;
+}
+.button_img_4{
+	padding-right: 20px;
+}
+.button_img_5{
+	padding-left: 15px;
+}
+.register_continue{
+	padding-left: 42px;
+}
