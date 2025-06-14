@@ -1,0 +1,31 @@
+{% load static %}
+
+<footer>
+	<a href="{% url 'accounts' %}" class="footer-btn accounts {% if request.path == '/accounts/' %}active{% endif %}">
+		<svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" width="28" height="22" viewBox="0 0 28 22" fill="none">
+			<path d="M1.625 8.99941V18.5987C2.0992 20.514 2.73203 21.0316 4.48187 20.9985H24.4799C26.2174 20.7403 26.6627 20.0121 26.6226 17.7988V8.99941M1.625 8.99941V4.19976C2.12146 2.3196 2.68444 1.55572 4.48187 1H23.4086C25.24 1.14414 25.8842 1.75131 26.6226 3.39982V8.99941M1.625 8.99941H26.6226" stroke="currentColor" stroke-width="2"/>
+		</svg>
+		<span>Счета</span>
+	</a>
+	<a href="{% url 'operations' %}" class="footer-btn operations {% if request.path == '/operations/' %}active{% endif %}">
+		<svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" width="27" height="22" viewBox="0 0 27 22" fill="none">
+			<path d="M25.875 6.17241C25.875 6.17241 2.10302 6.51724 1.7001 6.17241C1.29719 5.82759 7.34091 1 7.34091 1" stroke="currentColor" stroke-width="2"/>
+			<path d="M0.874988 15.8276C0.874988 15.8276 24.647 15.4828 25.0499 15.8276C25.4528 16.1724 19.4091 21 19.4091 21" stroke="currentColor" stroke-width="2"/>
+		</svg>
+		<span>Операции</span>
+	</a>
+	<a href="{% url 'plans' %}" class="footer-btn plans {% if request.path == '/plans/' %}active{% endif %}">
+		<svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" width="28" height="23" viewBox="0 0 28 23" fill="none">
+			<path d="M5.98611 20.0323V1M5.98611 1H2.51389C1.91417 1.20015 1.59907 1.42351 1.125 2.29032V20.6774H5.98611H15.3611C17.017 20.274 17.3689 19.7603 17.7917 18.7419V3.58065C16.5184 1.92243 15.7487 1.43165 14.3194 1H5.98611ZM22.6528 3.58065V18.4194L24.7361 21L26.125 18.7419V3.58065M22.6528 3.58065V1.64516H26.125V3.58065M22.6528 3.58065H26.125" stroke="currentColor" stroke-width="2"/>
+		</svg>
+		<span>Планы</span>
+	</a>
+	<a href="{% url 'more' %}" class="footer-btn more {% if request.path == '/more/' %}active{% endif %}">
+		<svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" width="26" height="22" viewBox="0 0 26 22" fill="none">
+			<line x1="0.375" y1="1" x2="25.375" y2="1" stroke="currentColor" stroke-width="2"/>
+			<line x1="0.375" y1="11" x2="25.375" y2="11" stroke="currentColor" stroke-width="2"/>
+			<line x1="0.375" y1="21" x2="25.375" y2="21" stroke="currentColor" stroke-width="2"/>
+		</svg>
+		<span>Ещё</span>
+	</a>
+</footer>

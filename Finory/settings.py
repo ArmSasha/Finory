@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-0*d5$9&49i5akh&*zw$)gv)(7c5qfc)kc*d!l-+)fg$^pg$gel
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['finory.onrender.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -48,7 +48,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'Finory.urls'
@@ -126,11 +125,6 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS  = [
     BASE_DIR / "static",
 ]
-
-
-# Для продакшена (Render, Heroku и т. д.)
-STATIC_ROOT = BASE_DIR / 'staticfiles'  # Папка, куда `collectstatic` скопирует файлы
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field

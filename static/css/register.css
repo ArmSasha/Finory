@@ -1,24 +1,16 @@
 :root {
-	--main_bg: #F4F4F7;
+	--mainBg: #F4F4F7;
 	--text: #000;
-	--button_bg: #FFFFFF;
+	--buttonBg: #FFFFFF;
 	--border: #000;
 	color-scheme: light;
 }
 [dark]{
-	--main_bg: #1A1A19;
+	--mainBg: #1A1A19;
 	--text: #fff;
-	--button_bg: #212324;
+	--buttonBg: #212324;
 	--border: #FFF;
 	color-scheme: dark;
-}
-
-*{
-	margin: 0;
-	padding: 0;
-	overflow-x: hidden;
-	touch-action: pan-x pan-y;
-  	height: 100% 
 }
 
 /* Dark mode */
@@ -71,10 +63,10 @@
     transition: 0.4s;
 }
 .switch__input:focus + .switch__slider{
-    box-shadow: 0 0 1px #2196f3;
+    box-shadow: 0 0 1px #1DB954;
 }
 .switch__input:checked + .switch__slider{
-    background-color: #2196f3; 
+    background-color: #1DB954; 
 }
 .switch__input:checked + .switch__slider::before{
     transform: translateX(26px);
@@ -97,7 +89,7 @@
 }
 body{
 	text-align: center;
-	background-color: var(--main_bg);
+	background-color: var(--mainBg);
 	color: var(--text);
 }
 header{
@@ -140,7 +132,7 @@ main{
 	display: flex;
 	border: 1px solid var(--border);
 	color: var(--text);
-	background-color: var(--button_bg);
+	background-color: var(--buttonBg);
 	width: 310px;
 	height: 50px;
 	text-align: center;
@@ -149,7 +141,7 @@ main{
 	align-items: center;
 	font-family: SF Pro Display, Semibold;
 	font-size: 16px;
-	font-weight: 500;
+	font-weight: 700;
 	margin-bottom: 31px;
 }
 .button_img_1, .button_img_2{
@@ -164,4 +156,10 @@ main{
 }
 .button_img_4{
 	padding-right: 20px;
+}
+.button_img_5{
+	padding-left: 15px;
+}
+.register_continue{
+	padding-left: 42px;
 }

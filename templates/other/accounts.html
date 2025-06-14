@@ -1,0 +1,57 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="accounts_content">
+	<div class="cards">
+		<button class="cards_title" id="toggleButton">
+			<span>Карты и счета</span>
+			<svg class="accounts_arrow" xmlns="http://www.w3.org/2000/svg" width="10" height="8" viewBox="0 0 10 8" fill="none">
+				<path d="M5 8L0.669872 0.5H9.33013L5 8Z" fill="currentColor"/>
+			</svg>
+		</button>
+		<div class="cards_dropdown" id="dropdownContent">
+			<div class="cash">
+				<div>
+					<img class='cash_img' src="{% static 'Images/accounts/cash.png' %}">
+					<span class='cash_title'>Наличные</span>
+				</div>
+				<span class="cash_money">1500,00 ₽</span>
+			</div>
+		</div>
+	</div>
+
+	<img class='accounts_line' src="{% static 'Images/accounts/line.png' %}">
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const button = document.getElementById('toggleButton');
+    const dropdown = document.getElementById('dropdownContent');
+
+    button.addEventListener('click', function () {
+        button.classList.toggle('active');
+
+        if (dropdown.style.height && dropdown.style.height !== '0px') {
+            // Закрываем меню
+            dropdown.style.height = dropdown.scrollHeight + 'px'; // сначала явно задаём текущую высоту
+            requestAnimationFrame(() => {
+                dropdown.style.height = '0px'; // а потом плавно уменьшаем
+            });
+        } else {
+            // Открываем меню
+            dropdown.style.height = dropdown.scrollHeight + 'px'; // плавно увеличиваем высоту
+            dropdown.addEventListener('transitionend', function handler() {
+                dropdown.style.height = 'auto'; // чтобы после анимации контент мог динамически менять высоту
+                dropdown.removeEventListener('transitionend', handler);
+            });
+        }
+    });
+});
+
+
+</script>
+
+{% endblock %}

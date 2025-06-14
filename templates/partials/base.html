@@ -1,0 +1,40 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="icon" type="image/png" href="{% static 'Images/logo.png' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+
+    <title>Finory</title>
+</head>
+<body>
+
+    
+	<main id="content">
+        <div class="dark_mode">
+                <span class="dark_mode_title">Тёмная тема</span>
+                <label class="switch">
+                    <input type="checkbox" id="themeToggle" class="switch__input" onchange="ChangeTheme(this.checked)">
+                    <span class="switch__slider"></span>
+                </label>
+            </div>
+		{% block content %}
+
+		{% endblock %}
+	</main>
+
+    {% include 'partials/footer.html' %}
+    
+
+    <script src="{% static 'js/main.js' %}"></script>
+
+<!-- <script>
+    const csrftoken = '{{ csrf_token }}';
+</script> -->
+</body>
+</html>
